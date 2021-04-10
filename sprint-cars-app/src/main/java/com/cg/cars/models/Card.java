@@ -2,20 +2,45 @@ package com.cg.cars.models;
 
 import java.time.LocalDate;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table
 public class Card {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
+	@Column
 	private String name;
-	private String number;
-    private LocalDate expiry;
-    private int cvv;
-    
+	@Column
+	private String cardNumber;
+	@Column
+	private LocalDate expiry;
+	@Column
+	private int cvv;
+
 	public Card() {
 	}
 
-	public Card(String name, String number, LocalDate expiry, int cvv) {
+	public Card(long id, String name, String number, LocalDate expiry, int cvv) {
+		this.id = id;
 		this.name = name;
-		this.number = number;
+		this.cardNumber = number;
 		this.expiry = expiry;
 		this.cvv = cvv;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
 	}
 
 	public String getName() {
@@ -27,11 +52,11 @@ public class Card {
 	}
 
 	public String getNumber() {
-		return number;
+		return cardNumber;
 	}
 
 	public void setNumber(String number) {
-		this.number = number;
+		this.cardNumber = number;
 	}
 
 	public LocalDate getExpiry() {
@@ -52,10 +77,8 @@ public class Card {
 
 	@Override
 	public String toString() {
-		return "Card [name=" + name + ", number=" + number + ", expiry=" + expiry + ", cvv=" + cvv + "]";
+		return "Card [id=" + id + ", name=" + name + ", cardNumber=" + cardNumber + ", expiry=" + expiry + ", cvv="
+				+ cvv + "]";
 	}
-    
-    
-    
-    
+
 }
