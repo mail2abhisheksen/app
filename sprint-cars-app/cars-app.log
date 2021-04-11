@@ -4079,3 +4079,362 @@ Caused by: org.springframework.data.mapping.PropertyReferenceException: No prope
 2021-04-10 14:47:06.053  INFO 13328 --- [http-nio-8090-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2021-04-10 14:47:06.055  INFO 13328 --- [http-nio-8090-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2021-04-10 14:47:06.058  INFO 13328 --- [http-nio-8090-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-04-10 14:56:50.361  INFO 8124 --- [restartedMain] com.cg.cars.SprintCarsAppApplication     : Starting SprintCarsAppApplication using Java 15.0.2 on LIN59015669 with PID 8124 (C:\Users\RISHABGU\git\app\sprint-cars-app\bin\main started by rishabgu in C:\Users\RISHABGU\git\app\sprint-cars-app)
+2021-04-10 14:56:50.370  INFO 8124 --- [restartedMain] com.cg.cars.SprintCarsAppApplication     : No active profile set, falling back to default profiles: default
+2021-04-10 14:56:50.528  INFO 8124 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\RISHABGU\.gradle\caches\modules-2\files-2.1\com.oracle.database.jdbc\ojdbc8\19.8.0.0\df9cff9b91c47d06b9a0482d566ee2d83a03e586\ojdbc8-19.8.0.0.jar referenced one or more files that do not exist: file:/C:/Users/RISHABGU/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/19.8.0.0/df9cff9b91c47d06b9a0482d566ee2d83a03e586/oraclepki.jar
+2021-04-10 14:56:50.530  INFO 8124 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-10 14:56:50.531  INFO 8124 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-10 14:56:52.470  INFO 8124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-10 14:56:52.654  INFO 8124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 168 ms. Found 6 JPA repository interfaces.
+2021-04-10 14:56:54.097  INFO 8124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-04-10 14:56:54.128  INFO 8124 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-10 14:56:54.129  INFO 8124 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-04-10 14:56:54.359  INFO 8124 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-10 14:56:54.360  INFO 8124 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3827 ms
+2021-04-10 14:56:54.968  INFO 8124 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-10 14:56:55.087  INFO 8124 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-04-10 14:56:55.382  INFO 8124 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-10 14:56:55.640  INFO 8124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-10 14:56:56.202  INFO 8124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-10 14:56:56.233  INFO 8124 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-04-10 14:56:56.834  WARN 8124 --- [restartedMain] org.hibernate.cfg.AnnotationBinder       : HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.cg.cars.models.Customer
+2021-04-10 14:56:57.116  INFO 8124 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.cg.cars.models.Appointment (class must be instantiated by Interceptor)
+2021-04-10 14:57:08.634  INFO 8124 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-10 14:57:08.647  INFO 8124 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 14:57:08.676  INFO 8124 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-10 14:57:09.371  WARN 8124 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customerController': Unsatisfied dependency expressed through field 'customerService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.cg.cars.services.CustomerServiceImpl' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2021-04-10 14:57:09.372  INFO 8124 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 14:57:09.379  INFO 8124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-10 14:57:09.449  INFO 8124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-10 14:57:09.458  INFO 8124 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-04-10 14:57:09.507  INFO 8124 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-04-10 14:57:09.561 ERROR 8124 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field customerService in com.cg.cars.controllers.CustomerController required a bean of type 'com.cg.cars.services.CustomerServiceImpl' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.cg.cars.services.CustomerServiceImpl' in your configuration.
+
+2021-04-10 14:59:06.675  INFO 648 --- [restartedMain] com.cg.cars.SprintCarsAppApplication     : Starting SprintCarsAppApplication using Java 15.0.2 on LIN59015669 with PID 648 (C:\Users\RISHABGU\git\app\sprint-cars-app\bin\main started by rishabgu in C:\Users\RISHABGU\git\app\sprint-cars-app)
+2021-04-10 14:59:06.683  INFO 648 --- [restartedMain] com.cg.cars.SprintCarsAppApplication     : No active profile set, falling back to default profiles: default
+2021-04-10 14:59:06.878  INFO 648 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\RISHABGU\.gradle\caches\modules-2\files-2.1\com.oracle.database.jdbc\ojdbc8\19.8.0.0\df9cff9b91c47d06b9a0482d566ee2d83a03e586\ojdbc8-19.8.0.0.jar referenced one or more files that do not exist: file:/C:/Users/RISHABGU/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/19.8.0.0/df9cff9b91c47d06b9a0482d566ee2d83a03e586/oraclepki.jar
+2021-04-10 14:59:06.879  INFO 648 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-10 14:59:06.880  INFO 648 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-10 14:59:09.413  INFO 648 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-10 14:59:09.861  INFO 648 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 404 ms. Found 6 JPA repository interfaces.
+2021-04-10 14:59:12.312  INFO 648 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-04-10 14:59:12.348  INFO 648 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-10 14:59:12.349  INFO 648 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-04-10 14:59:12.795  INFO 648 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-10 14:59:12.797  INFO 648 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5915 ms
+2021-04-10 14:59:13.723  INFO 648 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-10 14:59:13.883  INFO 648 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-04-10 14:59:14.410  INFO 648 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-10 14:59:14.761  INFO 648 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-10 14:59:15.344  INFO 648 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-10 14:59:15.377  INFO 648 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-04-10 14:59:16.164  WARN 648 --- [restartedMain] org.hibernate.cfg.AnnotationBinder       : HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.cg.cars.models.Customer
+2021-04-10 14:59:16.572  INFO 648 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.cg.cars.models.Appointment (class must be instantiated by Interceptor)
+2021-04-10 14:59:17.619  INFO 648 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-10 14:59:17.633  INFO 648 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 14:59:17.671  INFO 648 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-10 14:59:19.078  WARN 648 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customerController': Unsatisfied dependency expressed through field 'customerService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.cg.cars.services.CustomerServiceImpl' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2021-04-10 14:59:19.080  INFO 648 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 14:59:19.092  INFO 648 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-10 14:59:19.123  INFO 648 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-10 14:59:19.129  INFO 648 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-04-10 14:59:19.156  INFO 648 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-04-10 14:59:19.217 ERROR 648 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field customerService in com.cg.cars.controllers.CustomerController required a bean of type 'com.cg.cars.services.CustomerServiceImpl' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.cg.cars.services.CustomerServiceImpl' in your configuration.
+
+2021-04-10 15:01:41.902  INFO 13912 --- [restartedMain] com.cg.cars.SprintCarsAppApplication     : Starting SprintCarsAppApplication using Java 15.0.2 on LIN59015669 with PID 13912 (C:\Users\RISHABGU\git\app\sprint-cars-app\bin\main started by rishabgu in C:\Users\RISHABGU\git\app\sprint-cars-app)
+2021-04-10 15:01:41.911  INFO 13912 --- [restartedMain] com.cg.cars.SprintCarsAppApplication     : No active profile set, falling back to default profiles: default
+2021-04-10 15:01:42.040  INFO 13912 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\RISHABGU\.gradle\caches\modules-2\files-2.1\com.oracle.database.jdbc\ojdbc8\19.8.0.0\df9cff9b91c47d06b9a0482d566ee2d83a03e586\ojdbc8-19.8.0.0.jar referenced one or more files that do not exist: file:/C:/Users/RISHABGU/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/19.8.0.0/df9cff9b91c47d06b9a0482d566ee2d83a03e586/oraclepki.jar
+2021-04-10 15:01:42.040  INFO 13912 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-10 15:01:42.041  INFO 13912 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-10 15:01:43.999  INFO 13912 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-10 15:01:44.167  INFO 13912 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 150 ms. Found 6 JPA repository interfaces.
+2021-04-10 15:01:45.672  INFO 13912 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-04-10 15:01:45.696  INFO 13912 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-10 15:01:45.697  INFO 13912 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-04-10 15:01:45.905  INFO 13912 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-10 15:01:45.906  INFO 13912 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3864 ms
+2021-04-10 15:01:46.578  INFO 13912 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-10 15:01:46.717  INFO 13912 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-04-10 15:01:47.023  INFO 13912 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-10 15:01:47.283  INFO 13912 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-10 15:01:47.864  INFO 13912 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-10 15:01:47.892  INFO 13912 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-04-10 15:01:48.589  WARN 13912 --- [restartedMain] org.hibernate.cfg.AnnotationBinder       : HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.cg.cars.models.Customer
+2021-04-10 15:01:48.946  INFO 13912 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.cg.cars.models.Appointment (class must be instantiated by Interceptor)
+2021-04-10 15:01:50.255  INFO 13912 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-10 15:01:50.281  INFO 13912 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:01:50.322  INFO 13912 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-10 15:01:51.615  WARN 13912 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customerController': Unsatisfied dependency expressed through field 'customerService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.cg.cars.services.CustomerServiceImpl' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2021-04-10 15:01:51.618  INFO 13912 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:01:51.631  INFO 13912 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-10 15:01:51.670  INFO 13912 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-10 15:01:51.680  INFO 13912 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-04-10 15:01:51.730  INFO 13912 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-04-10 15:01:51.869 ERROR 13912 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field customerService in com.cg.cars.controllers.CustomerController required a bean of type 'com.cg.cars.services.CustomerServiceImpl' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.cg.cars.services.CustomerServiceImpl' in your configuration.
+
+2021-04-10 15:05:44.241  INFO 11648 --- [restartedMain] com.cg.cars.SprintCarsAppApplication     : Starting SprintCarsAppApplication using Java 15.0.2 on LIN59015669 with PID 11648 (C:\Users\RISHABGU\git\app\sprint-cars-app\bin\main started by rishabgu in C:\Users\RISHABGU\git\app\sprint-cars-app)
+2021-04-10 15:05:44.248  INFO 11648 --- [restartedMain] com.cg.cars.SprintCarsAppApplication     : No active profile set, falling back to default profiles: default
+2021-04-10 15:05:44.521  INFO 11648 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\RISHABGU\.gradle\caches\modules-2\files-2.1\com.oracle.database.jdbc\ojdbc8\19.8.0.0\df9cff9b91c47d06b9a0482d566ee2d83a03e586\ojdbc8-19.8.0.0.jar referenced one or more files that do not exist: file:/C:/Users/RISHABGU/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/19.8.0.0/df9cff9b91c47d06b9a0482d566ee2d83a03e586/oraclepki.jar
+2021-04-10 15:05:44.526  INFO 11648 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-10 15:05:44.531  INFO 11648 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-10 15:05:47.233  INFO 11648 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-10 15:05:47.430  INFO 11648 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 172 ms. Found 6 JPA repository interfaces.
+2021-04-10 15:05:49.290  INFO 11648 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-04-10 15:05:49.317  INFO 11648 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-10 15:05:49.318  INFO 11648 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-04-10 15:05:49.536  INFO 11648 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-10 15:05:49.537  INFO 11648 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5003 ms
+2021-04-10 15:05:50.171  INFO 11648 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-10 15:05:50.322  INFO 11648 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-04-10 15:05:50.654  INFO 11648 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-10 15:05:50.894  INFO 11648 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-10 15:05:51.395  INFO 11648 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-10 15:05:51.430  INFO 11648 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-04-10 15:05:52.153  WARN 11648 --- [restartedMain] org.hibernate.cfg.AnnotationBinder       : HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.cg.cars.models.Customer
+2021-04-10 15:05:52.496  INFO 11648 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.cg.cars.models.Appointment (class must be instantiated by Interceptor)
+2021-04-10 15:05:53.399  INFO 11648 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-10 15:05:53.414  INFO 11648 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:05:53.452  INFO 11648 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-10 15:05:54.289  WARN 11648 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customerController': Unsatisfied dependency expressed through field 'customerService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.cg.cars.services.CustomerServiceImpl' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2021-04-10 15:05:54.291  INFO 11648 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:05:54.302  INFO 11648 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-10 15:05:54.325  INFO 11648 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-10 15:05:54.332  INFO 11648 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-04-10 15:05:54.364  INFO 11648 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-04-10 15:05:54.429 ERROR 11648 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field customerService in com.cg.cars.controllers.CustomerController required a bean of type 'com.cg.cars.services.CustomerServiceImpl' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.cg.cars.services.CustomerServiceImpl' in your configuration.
+
+2021-04-10 15:08:08.059  INFO 12180 --- [restartedMain] com.cg.cars.SprintCarsAppApplication     : Starting SprintCarsAppApplication using Java 15.0.2 on LIN59015669 with PID 12180 (C:\Users\RISHABGU\git\app\sprint-cars-app\bin\main started by rishabgu in C:\Users\RISHABGU\git\app\sprint-cars-app)
+2021-04-10 15:08:08.071  INFO 12180 --- [restartedMain] com.cg.cars.SprintCarsAppApplication     : No active profile set, falling back to default profiles: default
+2021-04-10 15:08:08.307  INFO 12180 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\RISHABGU\.gradle\caches\modules-2\files-2.1\com.oracle.database.jdbc\ojdbc8\19.8.0.0\df9cff9b91c47d06b9a0482d566ee2d83a03e586\ojdbc8-19.8.0.0.jar referenced one or more files that do not exist: file:/C:/Users/RISHABGU/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/19.8.0.0/df9cff9b91c47d06b9a0482d566ee2d83a03e586/oraclepki.jar
+2021-04-10 15:08:08.307  INFO 12180 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-10 15:08:08.308  INFO 12180 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-10 15:08:10.504  INFO 12180 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-10 15:08:10.737  INFO 12180 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 211 ms. Found 6 JPA repository interfaces.
+2021-04-10 15:08:12.637  INFO 12180 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-04-10 15:08:12.669  INFO 12180 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-10 15:08:12.670  INFO 12180 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-04-10 15:08:12.998  INFO 12180 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-10 15:08:12.999  INFO 12180 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4685 ms
+2021-04-10 15:08:13.824  INFO 12180 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-10 15:08:13.996  INFO 12180 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-04-10 15:08:14.359  INFO 12180 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-10 15:08:14.658  INFO 12180 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-10 15:08:15.349  INFO 12180 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-10 15:08:15.406  INFO 12180 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-04-10 15:08:16.125  WARN 12180 --- [restartedMain] org.hibernate.cfg.AnnotationBinder       : HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.cg.cars.models.Customer
+2021-04-10 15:08:16.443  INFO 12180 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.cg.cars.models.Appointment (class must be instantiated by Interceptor)
+2021-04-10 15:08:17.657  INFO 12180 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-10 15:08:17.674  INFO 12180 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:08:17.708  INFO 12180 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-10 15:08:18.519  WARN 12180 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customerController': Unsatisfied dependency expressed through field 'customerService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.cg.cars.services.CustomerServiceImpl' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2021-04-10 15:08:18.521  INFO 12180 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:08:18.531  INFO 12180 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-10 15:08:18.556  INFO 12180 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-10 15:08:18.567  INFO 12180 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-04-10 15:08:18.638  INFO 12180 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-04-10 15:08:18.738 ERROR 12180 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field customerService in com.cg.cars.controllers.CustomerController required a bean of type 'com.cg.cars.services.CustomerServiceImpl' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.cg.cars.services.CustomerServiceImpl' in your configuration.
+
+2021-04-10 15:10:26.858  INFO 3180 --- [restartedMain] com.cg.cars.SprintCarsAppApplication     : Starting SprintCarsAppApplication using Java 15.0.2 on LIN59015669 with PID 3180 (C:\Users\RISHABGU\git\app\sprint-cars-app\bin\main started by rishabgu in C:\Users\RISHABGU\git\app\sprint-cars-app)
+2021-04-10 15:10:26.865  INFO 3180 --- [restartedMain] com.cg.cars.SprintCarsAppApplication     : No active profile set, falling back to default profiles: default
+2021-04-10 15:10:27.049  INFO 3180 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\RISHABGU\.gradle\caches\modules-2\files-2.1\com.oracle.database.jdbc\ojdbc8\19.8.0.0\df9cff9b91c47d06b9a0482d566ee2d83a03e586\ojdbc8-19.8.0.0.jar referenced one or more files that do not exist: file:/C:/Users/RISHABGU/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/19.8.0.0/df9cff9b91c47d06b9a0482d566ee2d83a03e586/oraclepki.jar
+2021-04-10 15:10:27.052  INFO 3180 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-10 15:10:27.053  INFO 3180 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-10 15:10:29.395  INFO 3180 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-10 15:10:29.635  INFO 3180 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 210 ms. Found 6 JPA repository interfaces.
+2021-04-10 15:10:31.303  INFO 3180 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-04-10 15:10:31.329  INFO 3180 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-10 15:10:31.330  INFO 3180 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-04-10 15:10:31.612  INFO 3180 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-10 15:10:31.613  INFO 3180 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4557 ms
+2021-04-10 15:10:32.279  INFO 3180 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-10 15:10:32.411  INFO 3180 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-04-10 15:10:32.721  INFO 3180 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-10 15:10:32.944  INFO 3180 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-10 15:10:33.540  INFO 3180 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-10 15:10:33.569  INFO 3180 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-04-10 15:10:34.264  WARN 3180 --- [restartedMain] org.hibernate.cfg.AnnotationBinder       : HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.cg.cars.models.Customer
+2021-04-10 15:10:34.663  INFO 3180 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.cg.cars.models.Appointment (class must be instantiated by Interceptor)
+2021-04-10 15:10:35.752  INFO 3180 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-10 15:10:35.782  INFO 3180 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:10:35.818  INFO 3180 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-10 15:10:36.739  WARN 3180 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customerController': Unsatisfied dependency expressed through field 'customerService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.cg.cars.services.CustomerServiceImpl' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2021-04-10 15:10:36.742  INFO 3180 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:10:36.749  INFO 3180 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-04-10 15:10:36.776  INFO 3180 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-04-10 15:10:36.782  INFO 3180 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-04-10 15:10:36.819  INFO 3180 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-04-10 15:10:36.872 ERROR 3180 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field customerService in com.cg.cars.controllers.CustomerController required a bean of type 'com.cg.cars.services.CustomerServiceImpl' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.cg.cars.services.CustomerServiceImpl' in your configuration.
+
+2021-04-10 15:45:53.139  INFO 13372 --- [restartedMain] com.cg.cars.SprintCarsAppApplication     : Starting SprintCarsAppApplication using Java 15.0.2 on LIN59015669 with PID 13372 (C:\Users\RISHABGU\git\app\sprint-cars-app\bin\main started by rishabgu in C:\Users\RISHABGU\git\app\sprint-cars-app)
+2021-04-10 15:45:53.147  INFO 13372 --- [restartedMain] com.cg.cars.SprintCarsAppApplication     : No active profile set, falling back to default profiles: default
+2021-04-10 15:45:53.313  INFO 13372 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\RISHABGU\.gradle\caches\modules-2\files-2.1\com.oracle.database.jdbc\ojdbc8\19.8.0.0\df9cff9b91c47d06b9a0482d566ee2d83a03e586\ojdbc8-19.8.0.0.jar referenced one or more files that do not exist: file:/C:/Users/RISHABGU/.gradle/caches/modules-2/files-2.1/com.oracle.database.jdbc/ojdbc8/19.8.0.0/df9cff9b91c47d06b9a0482d566ee2d83a03e586/oraclepki.jar
+2021-04-10 15:45:53.314  INFO 13372 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-10 15:45:53.315  INFO 13372 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-10 15:46:05.523  INFO 13372 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-10 15:46:05.702  INFO 13372 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 160 ms. Found 6 JPA repository interfaces.
+2021-04-10 15:46:07.187  INFO 13372 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2021-04-10 15:46:07.218  INFO 13372 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-10 15:46:07.218  INFO 13372 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-04-10 15:46:07.473  INFO 13372 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-10 15:46:07.474  INFO 13372 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 14157 ms
+2021-04-10 15:46:08.081  INFO 13372 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-10 15:46:08.206  INFO 13372 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-04-10 15:46:08.502  INFO 13372 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-10 15:46:08.872  INFO 13372 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-10 15:46:09.453  INFO 13372 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-10 15:46:09.481  INFO 13372 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2021-04-10 15:46:10.088  WARN 13372 --- [restartedMain] org.hibernate.cfg.AnnotationBinder       : HHH000139: Illegal use of @Table in a subclass of a SINGLE_TABLE hierarchy: com.cg.cars.models.Customer
+2021-04-10 15:46:10.611  INFO 13372 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.cg.cars.models.Appointment (class must be instantiated by Interceptor)
+2021-04-10 15:46:11.763  INFO 13372 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-10 15:46:11.783  INFO 13372 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-10 15:46:11.820  INFO 13372 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-10 15:46:13.493  WARN 13372 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-10 15:46:13.858  INFO 13372 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-10 15:46:14.062  INFO 13372 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-10 15:46:14.593  INFO 13372 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2021-04-10 15:46:14.596  INFO 13372 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-04-10 15:46:14.662  INFO 13372 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-04-10 15:46:14.737  INFO 13372 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-04-10 15:46:15.445  INFO 13372 --- [restartedMain] com.cg.cars.SprintCarsAppApplication     : Started SprintCarsAppApplication in 23.282 seconds (JVM running for 24.82)
+2021-04-10 15:48:12.357  INFO 13372 --- [http-nio-8090-exec-1] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x03T0xa10x150x9c0xa0t0x020x820xf0/0xf20x1f50xa70x1d0x9a(0xccP0x070xea0xa30xc8v0x074}0x1d0x82@RI]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:417) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:261) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2021-04-10 15:48:12.357  INFO 13372 --- [http-nio-8090-exec-2] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x03Mrb0x80;UB0xe80x810xacd20x890xce^0xf2+7kY}0x000xe40x16180x8cjA0xd30xf00xe1]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:417) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:261) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1707) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.44.jar:9.0.44]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+
+2021-04-10 15:48:48.790  INFO 13372 --- [http-nio-8090-exec-10] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-10 15:48:48.791  INFO 13372 --- [http-nio-8090-exec-10] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-10 15:48:48.793  INFO 13372 --- [http-nio-8090-exec-10] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-04-10 21:24:10.998  WARN 13372 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h31m59s543ms627µs500ns).
