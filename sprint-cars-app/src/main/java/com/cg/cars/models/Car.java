@@ -14,16 +14,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-/**
-*
-* @author TEAM 2
-* MEMBERS: Abhishek Sen
-* 		   Prashant Mhaske
-*          Rishabh Gupta
-*          Akshay Talekar
-*          Nikhil Nichit
-*
-*/
 
 @Entity
 @Table
