@@ -48,6 +48,13 @@ public class UserServiceTest {
 	}
 	
 	@Test
+	public void CustomerSignInNegativeTest() {
+		when(userRepository.findById(4L)).thenThrow(InvalidPasswordException.class);
+		assertThrows(InvalidPasswordException.class, () -> userService.signIn(4L, "hjk"));
+		//assertEquals("Invalid Password", userService.signIn(5L, "hjk"));
+	}
+//	
+	@Test
 	public void testInvalidPasswordException(){
 		when(userRepository.findById(1L)).thenReturn(Optional.of(customer));
 		assertThrows(InvalidPasswordException.class, () ->userService.signIn(1L, "wrongpass"));
@@ -74,5 +81,11 @@ public class UserServiceTest {
 		when(userRepository.save(customer)).thenReturn(customer);
 		assertEquals(customer, userService.changePassword(1L, customer));
 		verify(userRepository,times(1)).save(customer);
+	}
+	
+	@Test
+	public void changePasswordNegativeTest() {
+		when(userRepository.findById(3L)).thenThrow(UserNotFoundException.class);
+		assertThrows(UserNotFoundException.class, () ->userService.changePassword(3L, customer));
 	}
 }

@@ -17,6 +17,17 @@ import org.springframework.web.bind.annotation.RestController;
 import com.cg.cars.models.Customer;
 import com.cg.cars.services.CustomerService;
 
+/**
+*
+* @author TEAM 2
+* MEMBERS: Abhishek Sen
+* 		   Prashant Mhaske
+*          Rishabh Gupta
+*          Akshay Talekar
+*          Nikhil Nichit
+*
+*/
+
 @RestController
 @RequestMapping("/customer")
 public class CustomerController {

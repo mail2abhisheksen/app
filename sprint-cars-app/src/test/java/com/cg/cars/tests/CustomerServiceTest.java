@@ -23,6 +23,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
 import com.cg.cars.exceptions.CustomerNotFoundException;
+import com.cg.cars.exceptions.PaymentNotFoundException;
 import com.cg.cars.models.Address;
 import com.cg.cars.models.Customer;
 import com.cg.cars.repositories.ICustomerRepository;
@@ -64,9 +65,24 @@ public class CustomerServiceTest {
 	}
 	
 	@Test
+	public void removeCustomerByIdNegativeTest() {
+		when(customerRepository.findById(2L)).thenThrow(CustomerNotFoundException.class);
+		assertThrows(CustomerNotFoundException.class, () -> customerService.removeCustomer(2L));
+		verify(customerRepository,times(0)).deleteById(2L);
+		verify(customerRepository,times(1)).findById(2L);
+	}
+	
+	@Test
 	public void updateCustomerTest() {
 		when(customerRepository.save(customer)).thenReturn(customer);
 		assertEquals(customer, customerService.updateCustomer(1L,customer));
+		verify(customerRepository,times(1)).save(customer);
+	}
+	
+	@Test
+	public void updateCustomerNegativeTest() {
+		when(customerRepository.save(customer)).thenThrow(CustomerNotFoundException.class);
+		assertThrows(CustomerNotFoundException.class, () -> customerService.updateCustomer(3L, customer));
 		verify(customerRepository,times(1)).save(customer);
 	}
 	
@@ -100,6 +116,7 @@ public class CustomerServiceTest {
 		assertEquals(customers, customerService.getAllCustomers());
 		verify(customerRepository,times(1)).findAll();
 	}
+	
 	
 	@AfterEach
 	public void tearDown() {

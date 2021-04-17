@@ -53,6 +53,8 @@ public class AdminServiceTest {
 		verify(adminRepository,times(1)).save(admin);
 	}
 	
+
+	
 	@Test
 	public void removeAdminbyIdTest() {
 		when(adminRepository.findById(567L)).thenReturn(Optional.of(admin));
@@ -63,10 +65,24 @@ public class AdminServiceTest {
 	}
 	
 	@Test
+	public void removeCustomerByIdNegativeTest() {
+		when(adminRepository.findById(2L)).thenThrow(AdminNotFoundException.class);
+		assertThrows(AdminNotFoundException.class, () -> adminService.removeAdmin(2L));
+		verify(adminRepository,times(0)).deleteById(2L);
+		verify(adminRepository,times(1)).findById(2L);
+	}
+	@Test
 	public void updateAdminTest() {
 		when(adminRepository.save(admin)).thenReturn(admin);
 		assertEquals(admin, adminService.updateAdmin(1L,admin));
 		verify(adminRepository,times(1)).save(admin);
+	}
+	
+	@Test
+	public void updateAdminNegativeTest() {
+		when(adminRepository.findById(4L)).thenThrow(AdminNotFoundException.class);
+		assertThrows(AdminNotFoundException.class, () -> adminService.updateAdmin(4L, admin));
+		verify(adminRepository,times(1)).findById(4L);
 	}
 	
 	@Test

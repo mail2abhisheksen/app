@@ -7,21 +7,31 @@ import javax.persistence.Embeddable;
 
 import javax.persistence.Transient;
 
+/**
+*
+* @author TEAM 2
+* MEMBERS: Abhishek Sen
+* 		   Prashant Mhaske
+*          Rishabh Gupta
+*          Akshay Talekar
+*          Nikhil Nichit
+*
+*/
 
 @Embeddable
 public class Card {
-	
+
 	@Column
 	private String name;
 	@Column
 	private String cardNumber;
 	@Column
-    private LocalDate expiry;
+	private LocalDate expiry;
 	@Transient
 	String expiryDate;
 	@Column
-    private int cvv;
-    
+	private int cvv;
+
 	public Card() {
 	}
 
@@ -32,7 +42,6 @@ public class Card {
 		this.cvv = cvv;
 	}
 
-	
 	public String getName() {
 		return name;
 	}
@@ -71,9 +80,4 @@ public class Card {
 				+ ", cvv=" + cvv + "]";
 	}
 
-	
-	
-    
-    
-    
 }

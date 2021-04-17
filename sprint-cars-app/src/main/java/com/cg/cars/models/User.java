@@ -12,11 +12,22 @@ import javax.persistence.Transient;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+/**
+*
+* @author TEAM 2
+* MEMBERS: Abhishek Sen
+* 		   Prashant Mhaske
+*          Rishabh Gupta
+*          Akshay Talekar
+*          Nikhil Nichit
+*
+*/
+
 @Entity
 @Table(name = "users")
 @Inheritance(strategy = InheritanceType.JOINED)
 public class User {
-	
+
 	@Transient
 	@JsonIgnore
 	public boolean isLoggedIn = false;
@@ -24,16 +35,16 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long userId;
-	
+
 	@Column
 	private String password;
-	
+
 	@Column
 	private String role;
 
 	public User() {
 		super();
-		
+
 	}
 
 	public User(long userId, String password, String role) {
@@ -71,8 +82,5 @@ public class User {
 	public String toString() {
 		return "User [userId=" + userId + ", password=" + password + ", role=" + role + "]";
 	}
-
-
-	
 
 }

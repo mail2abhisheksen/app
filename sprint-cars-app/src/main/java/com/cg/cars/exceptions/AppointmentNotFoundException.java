@@ -1,22 +1,27 @@
 package com.cg.cars.exceptions;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+/**
+*
+* @author TEAM 2
+* MEMBERS: Abhishek Sen
+* 		   Prashant Mhaske
+*          Rishabh Gupta
+*          Akshay Talekar
+*          Nikhil Nichit
+*
+*/
+
 public class AppointmentNotFoundException extends RuntimeException {
 
-	
-	
-	
+	Logger log = LoggerFactory.getLogger(GlobalExceptionHandler.class);
 	private static final long serialVersionUID = 1L;
-	
-    public AppointmentNotFoundException(String msg) {
-		super(msg);
-		
-	}
 
-	@Override
-    public String getMessage()
-    {
-		return super.getMessage();
-    }
-	
+	public AppointmentNotFoundException(String msg) {
+		super(msg);
+		log.info("Appointment not found !!");
+	}
 
 }

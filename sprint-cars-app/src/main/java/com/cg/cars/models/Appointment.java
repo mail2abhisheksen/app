@@ -5,17 +5,26 @@ import java.time.LocalTime;
 
 import javax.persistence.*;
 
+/**
+*
+* @author TEAM 2
+* MEMBERS: Abhishek Sen
+* 		   Prashant Mhaske
+*          Rishabh Gupta
+*          Akshay Talekar
+*          Nikhil Nichit
+*
+*/
 
 @Entity
 @Table
 public class Appointment {
-	
-	
+
 	@Id
 	@Column
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	
+
 	@Column
 	private String location;
 	@Column
@@ -24,15 +33,13 @@ public class Appointment {
 	private LocalDate preferredDate;
 	@Column
 	private LocalTime preferredTime;
-	
+
 	@OneToOne
 	private Customer customer;
 
 	@OneToOne
 	private Payment payment;
-	
-	
-	
+
 	public Appointment() {
 	}
 
@@ -110,7 +117,5 @@ public class Appointment {
 				+ ", preferredDate=" + preferredDate + ", preferredTime=" + preferredTime + ", customer=" + customer
 				+ ", payment=" + payment + "]";
 	}
-
-	
 
 }

@@ -13,6 +13,10 @@ public class UserService implements IUserService {
 	@Autowired
 	IUserRepository userRepository;
 
+	/**
+	 * Sign in into the Application
+	 */
+	
 	@Override
 	public User signIn(long userId, String password) {
 
@@ -33,8 +37,7 @@ public class UserService implements IUserService {
 			if (u.getPassword().equals(password)) {
 				u.isLoggedIn = true;
 				return u;
-			}
-			else {
+			} else {
 				u.isLoggedIn = false;
 				throw new InvalidPasswordException("Invalid Password");
 			}
@@ -46,6 +49,10 @@ public class UserService implements IUserService {
 
 	}
 
+	/**
+	 * SignOut from the Application
+	 */
+
 	@Override
 	public User signOut(User user) {
 
@@ -56,6 +63,10 @@ public class UserService implements IUserService {
 
 		return null;
 	}
+
+	/**
+	 * Change Password of the Account
+	 */
 
 	@Override
 	public User changePassword(long id, User user) {

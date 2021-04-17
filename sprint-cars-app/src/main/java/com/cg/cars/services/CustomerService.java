@@ -15,12 +15,20 @@ public class CustomerService implements ICustomerService {
 	
 	@Autowired
 	ICustomerRepository customerRepository;
-
+	
+	/**
+	 * Add Customer to the Database
+	 */
+	
 	@Override
 	public Customer addCustomer(Customer customer) {
 		return customerRepository.save(customer);
 	}
-
+	
+	/**
+	 * Remove Customer from the Database
+	 */
+	
 	@Override
 	public Customer removeCustomer(long custId) {
 		Customer customer=getCustomer(custId);
@@ -28,16 +36,28 @@ public class CustomerService implements ICustomerService {
 		return customer;
 	}
 
+	/**
+	 * Update Customer to the Database
+	 */
+	
 	@Override
 	public Customer updateCustomer(long custId, Customer customer) {
 		return customerRepository.save(customer);
 	}
 
+	/**
+	 * Get Customer from the Database
+	 */
+	
 	@Override
 	public Customer getCustomer(long custId) {
 		return customerRepository.findById(custId).orElseThrow(() -> new CustomerNotFoundException("Customer details not found!"));
 	}
 
+	/**
+	 * Get all Customers from the Database
+	 */
+	
 	@Override
 	public List<Customer> getAllCustomers() {
 		List<Customer> customers=new ArrayList<>();
@@ -45,15 +65,15 @@ public class CustomerService implements ICustomerService {
 		return customers;
 	}
 
-	@Override
-	public List<Customer> getCustomersByCity(String city) {
-		return null;
-	}
-
-	@Override
-	public List<Customer> getCustomersByState(String state) {
-		return null;
-	}
+//	@Override
+//	public List<Customer> getCustomersByCity(String city) {
+//		return null;
+//	}
+//
+//	@Override
+//	public List<Customer> getCustomersByState(String state) {
+//		return null;
+//	}
 	
 
 }

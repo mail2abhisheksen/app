@@ -16,10 +16,18 @@ public class AdminService implements IAdminService {
 	@Autowired
 	IAdminRepository adminRepository;
 
+	/**
+	 * Add Admin to the Database
+	 */
+	
 	@Override
 	public Admin addAdmin(Admin admin) {
 		return adminRepository.save(admin);
 	}
+	
+	/**
+	 * Remove Admin from the Database
+	 */
 
 	@Override
 	public Admin removeAdmin(long UserId) {
@@ -28,16 +36,27 @@ public class AdminService implements IAdminService {
 		return admin;
 	}
 
+	/**
+	 * Update Admin to the Database
+	 */
+	
 	@Override
 	public Admin updateAdmin(long userId, Admin admin) {
 		return adminRepository.save(admin);
 	}
 
+	/**
+	 * Get Admin from the Database
+	 */
 	@Override
 	public Admin getAdmin(long userId) {
 		return adminRepository.findById(userId)
 				.orElseThrow(() -> new AdminNotFoundException("Admin details not found!"));
 	}
+	
+	/**
+	 * Get all Admins from the Database
+	 */
 
 	@Override
 	public List<Admin> getAllAdmins() {

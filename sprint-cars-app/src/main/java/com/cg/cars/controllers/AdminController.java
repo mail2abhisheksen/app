@@ -16,6 +16,17 @@ import org.springframework.web.bind.annotation.RestController;
 import com.cg.cars.models.Admin;
 import com.cg.cars.services.AdminService;
 
+/**
+*
+* @author TEAM 2
+* MEMBERS: Abhishek Sen
+* 		   Prashant Mhaske
+*          Rishabh Gupta
+*          Akshay Talekar
+*          Nikhil Nichit
+*
+*/
+
 @RestController
 public class AdminController {
 

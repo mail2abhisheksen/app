@@ -21,6 +21,17 @@ import org.springframework.web.bind.annotation.RestController;
 import com.cg.cars.models.Appointment;
 import com.cg.cars.services.AppointmentService;
 
+/**
+*
+* @author TEAM 2
+* MEMBERS: Abhishek Sen
+* 		   Prashant Mhaske
+*          Rishabh Gupta
+*          Akshay Talekar
+*          Nikhil Nichit
+*
+*/
+
 @RestController
 @RequestMapping("/Appointment")
 public class AppointmentController {

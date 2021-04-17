@@ -10,25 +10,36 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+/**
+*
+* @author TEAM 2
+* MEMBERS: Abhishek Sen
+* 		   Prashant Mhaske
+*          Rishabh Gupta
+*          Akshay Talekar
+*          Nikhil Nichit
+*
+*/
+
 @Entity
 @Table(name = "orders")
 public class Order {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	
+
 	@Column
 	private double amount;
-	
+
 	@Column
 	private LocalDate billingDate;
-	
+
 	@OneToOne
 	private Customer customer;
-	
+
 	public Order() {
-		
+
 	}
 
 	public Order(long id, double amount, LocalDate billingDate, Customer customer) {
@@ -76,7 +87,5 @@ public class Order {
 		return "Order [id=" + id + ", amount=" + amount + ", billingDate=" + billingDate + ", customer=" + customer
 				+ "]";
 	}
-	
-	
 
 }

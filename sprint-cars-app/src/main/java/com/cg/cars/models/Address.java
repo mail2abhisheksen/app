@@ -3,31 +3,41 @@ package com.cg.cars.models;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
+/**
+*
+* @author TEAM 2
+* MEMBERS: Abhishek Sen
+* 		   Prashant Mhaske
+*          Rishabh Gupta
+*          Akshay Talekar
+*          Nikhil Nichit
+*
+*/
+
 @Embeddable
 public class Address {
-	
+
 	@Column
 	private int doorNo;
-	
+
 	@Column
 	private String street;
-	
+
 	@Column
 	private String area;
-	
+
 	@Column
 	private String city;
-	
+
 	@Column
 	private String state;
-	
+
 	@Column
 	private int pincode;
- 
-	
+
 	public Address() {
 		super();
-		
+
 	}
 
 	public Address(int doorNo, String street, String area, String city, String state, int pincode) {
@@ -93,9 +103,4 @@ public class Address {
 				+ state + ", pincode=" + pincode + "]";
 	}
 
-	
-	
-		
-	
-	
 }

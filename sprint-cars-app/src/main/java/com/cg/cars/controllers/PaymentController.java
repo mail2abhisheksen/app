@@ -17,6 +17,17 @@ import org.springframework.web.bind.annotation.RestController;
 import com.cg.cars.models.Payment;
 import com.cg.cars.services.PaymentService;
 
+/**
+*
+* @author TEAM 2
+* MEMBERS: Abhishek Sen
+* 		   Prashant Mhaske
+*          Rishabh Gupta
+*          Akshay Talekar
+*          Nikhil Nichit
+*
+*/
+
 @RestController
 @RequestMapping("/payment")
 public class PaymentController {

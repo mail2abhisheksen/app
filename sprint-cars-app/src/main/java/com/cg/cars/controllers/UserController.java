@@ -12,6 +12,17 @@ import org.springframework.web.bind.annotation.RestController;
 import com.cg.cars.models.User;
 import com.cg.cars.services.UserService;
 
+/**
+*
+* @author TEAM 2
+* MEMBERS: Abhishek Sen
+* 		   Prashant Mhaske
+*          Rishabh Gupta
+*          Akshay Talekar
+*          Nikhil Nichit
+*
+*/
+
 @RestController
 @RequestMapping("/user")
 public class UserController {
