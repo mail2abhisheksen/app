@@ -2,14 +2,18 @@ package com.cg.cars.models;
 
 
 import java.time.LocalDate;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 /**
 *
 * @author TEAM 2
@@ -23,39 +27,44 @@ import javax.persistence.Table;
 
 @Entity
 @Table
-public class Car {
+public class Car{
+	
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-
+	
 	@Column
 	private String brand;
-
+	
 	@Column
 	private String model;
-
+	
 	@Column
 	private String color;
-
+	
 	@Column
 	private String variant;
-
+	
 	@Column
 	private double price;
-
+	
 	@Column
 	private LocalDate registrationYear;
 
 	@Column
 	private String registrationState;
+	
+	@ManyToMany
+	@JsonIgnore
+	private List<Order> order;
 
 	public Car() {
 		super();
 	}
 
-	public Car(long id, String brand, String model, String color, String variant, double price,
-			LocalDate registrationYear, String registrationState) {
+	public Car(long id, String brand, String model,String color, String variant, double price,LocalDate registrationYear,
+			String registrationState) {
 		super();
 		this.id = id;
 		this.brand = brand;
@@ -106,7 +115,7 @@ public class Car {
 	public void setVariant(String variant) {
 		this.variant = variant;
 	}
-
+	
 	public double getPrice() {
 		return price;
 	}
@@ -129,6 +138,14 @@ public class Car {
 
 	public void setRegistrationState(String registrationState) {
 		this.registrationState = registrationState;
+	}
+
+	public List<Order> getOrder() {
+		return order;
+	}
+
+	public void setOrder(List<Order> order) {
+		this.order = order;
 	}
 
 	@Override

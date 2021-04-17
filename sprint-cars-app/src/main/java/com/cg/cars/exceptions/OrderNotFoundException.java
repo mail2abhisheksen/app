@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
 *
 */
 
-public class OrderNotFoundException extends RuntimeException {
+public class OrderNotFoundException extends RuntimeException{
 
 	Logger log = LoggerFactory.getLogger(GlobalExceptionHandler.class);
 	private static final long serialVersionUID = 1L;
@@ -23,5 +23,16 @@ public class OrderNotFoundException extends RuntimeException {
 		super(msg);
 		log.info("Order not found !!");
 	}
+	
+	
+}
+
+
+
+
+
+
+
+	
 
 }
