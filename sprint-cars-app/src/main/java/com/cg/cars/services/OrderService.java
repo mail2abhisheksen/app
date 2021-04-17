@@ -12,8 +12,7 @@ import com.cg.cars.exceptions.OrderNotFoundException;
 import com.cg.cars.models.Car;
 import com.cg.cars.models.Customer;
 import com.cg.cars.models.Order;
-import com.cg.cars.repositories.ICarRepository;
-//import com.cg.cars.repositories.ICustomerRepository;
+
 import com.cg.cars.repositories.IOrderRepository;
 
 import ch.qos.logback.core.net.SyslogOutputStream;
@@ -58,7 +57,7 @@ public class OrderService implements IOrderService {
 	
 	@Override
 	public Order removeOrder(long id) {
-		Order order = orderRepository.findById(id).get();
+		Order order = getOrderDetails(id);
 		orderRepository.deleteById(id);
 		return order;
 	}
