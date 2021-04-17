@@ -36,7 +36,7 @@ public class CarController {
 	ICarServiceImpl carService;
 
 	@PostMapping("/add")
-	public ResponseEntity<Car> saveCar(@RequestBody Car car) {
+	public ResponseEntity<Car> saveCar(@RequestBody Car car) {	//NOSONAR
 		carService.addCar(car);
 		return new ResponseEntity<>(carService.addCar(car), HttpStatus.OK);
 	}
@@ -89,7 +89,7 @@ public class CarController {
 	}
 
 	@PutMapping("/update/{id}")
-	public ResponseEntity<Car> update(@PathVariable("id") long id, @RequestBody Car car) {
+	public ResponseEntity<Car> update(@PathVariable("id") long id, @RequestBody Car car) {	//NOSONAR
 		return new ResponseEntity<>(carService.update(id, car), HttpStatus.OK);
 	}
 

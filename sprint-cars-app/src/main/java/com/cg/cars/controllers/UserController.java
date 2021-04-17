@@ -38,7 +38,7 @@ public class UserController {
 	}
 	
 	@GetMapping("/SignOut")
-	public User signOut(@RequestBody User user)
+	public User signOut(@RequestBody User user)	//NOSONAR
 	{
 		
 		
@@ -47,7 +47,7 @@ public class UserController {
 	
 	
 	@PutMapping("/ChangePassword/{id}")
-	public User changePassword(@PathVariable ("id") long id, @RequestBody User user) 
+	public User changePassword(@PathVariable ("id") long id, @RequestBody User user) 	//NOSONAR
 	{
 		return userService.changePassword(id, user);
 	}
