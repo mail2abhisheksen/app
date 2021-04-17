@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,9 +26,9 @@ public class OrderController {
 	@Autowired
 	OrderService orderService;
 	
-	@PostMapping("/add/{id}/{amount}/{billingDate}/{userId}")
-	public ResponseEntity<Order> addOrder(@PathVariable("id") long id, @PathVariable("amount") double amount, @RequestParam("billingDate") @DateTimeFormat(pattern="yyyy-MM-dd") LocalDate billingDate, @PathVariable("userId") long custId){
-		return new ResponseEntity<>(orderService.addOrder(id, amount, billingDate, custId), HttpStatus.OK);
+	@PostMapping("/add/{id}/{billingDate}/{userId}")
+	public ResponseEntity<Order> addOrder(@PathVariable("id") long id, @RequestParam("billingDate") @DateTimeFormat(pattern="yyyy-MM-dd") LocalDate billingDate, @PathVariable("userId") long custId, @RequestBody List<Long> carId) {
+		return new ResponseEntity<>(orderService.addOrder(id, billingDate, custId, carId), HttpStatus.OK);
 	}
 	
 	@DeleteMapping("/remove/{id}")
@@ -48,8 +49,18 @@ public class OrderController {
 		return new ResponseEntity<>(o, HttpStatus.OK);
 	}
 	
+	@GetMapping("/GetCars/billDate/{billingDate}")
+	private ResponseEntity<List<Order>> getOrdersByBillingDate(@RequestParam("billingDate") @DateTimeFormat(pattern="yyyy-MM-dd") LocalDate billingDate) {
+		return new ResponseEntity<List<Order>>(orderService.getOrdersByBillDate(billingDate), HttpStatus.OK);
+	}
+	
 	@GetMapping("/getAllOrders")
 	public List<Order> getAllOrders(){
 		return orderService.getAllOrders();
+	}
+	
+	@GetMapping("/getBill/{id}")
+	public ResponseEntity<String> getBill(@PathVariable("id") long id){
+		return new ResponseEntity<>(orderService.getBill(id), HttpStatus.OK); 
 	}
 }
