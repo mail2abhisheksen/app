@@ -46,6 +46,7 @@ public class PaymentService implements IPaymentService {
 	 */
 	@Override
 	public Payment updatePayment(long id, Payment payment) {
+		paymentRepository.findById(payment.getId()).orElseThrow(() ->new PaymentNotFoundException("No payment with id " + payment.getId() + " found"));
 		return paymentRepository.save(payment);
 	}
 
