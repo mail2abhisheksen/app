@@ -39,7 +39,7 @@ public class CarController {
 
 	@PostMapping("/add")
 	public ResponseEntity<Car> saveCar(@RequestBody Car car) { // NOSONAR
-		carService.addCar(car);
+//		carService.addCar(car);
 		return new ResponseEntity<>(carService.addCar(car), HttpStatus.OK);
 	}
 

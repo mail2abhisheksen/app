@@ -109,7 +109,7 @@ public class AppointmentService implements IAppointmentService {
 
 	@Override
 	public List<Appointment> getOpenAppointments() {
-		return appointmentRepository.findByInspectionType("open");
+		return appointmentRepository.findByInspectionType("home");
 	}
 
 }
